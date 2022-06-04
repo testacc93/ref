@@ -47,7 +47,7 @@ for j in range(0, 10000):
         
         tweet = items + link + hash_tags + str(datetime.datetime.now())
         print(len(tweet))
-        sleep(600)
+        
 
         if len(tweet) < 280:
             print(tweet)
@@ -72,3 +72,4 @@ for j in range(0, 10000):
 
             except:
                 pass
+        sleep(600)
