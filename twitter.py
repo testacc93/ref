@@ -39,12 +39,12 @@ hash_tags = '#cryptocurrency #crypto #casino #bitcoin #blackjack #btc #gambling 
 link = ' https://stake.com/?c=b980983c1a   '
 import datetime
 api = tweepy.API(auth)
-for j in range(0, 100):
+for j in range(0, 10000):
     for items in data:
         
         tweet = items + link + hash_tags + str(datetime.datetime.now())
         print(len(tweet))
-        sleep(6)
+        sleep(600)
 
         if len(tweet) < 280:
             print(tweet)
