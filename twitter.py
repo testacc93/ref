@@ -48,27 +48,24 @@ for j in range(0, 10000):
 
         if len(tweet) < 280:
             print(tweet)
+            try:
+                if "win" in items.lower():
+                    media = api.update_status(tweet)
+                    continue
+                if "slots" in items.lower():
+                    media = api.update_status(tweet)
+                    continue
+                if "sports" or "Sports" in items.lower():
+                    media = api.update_status(tweet)
+                    continue
+                if "bonuses" or "reload" or "bonus" in items.lower():
+                    media_1 = api.media_upload("vid.gif")
+                    media = api.update_status(tweet)
+                    continue
+                if "#casino" or "#casinos" in items.lower():
+                    media = api.update_status(tweet)
+                    continue
+                media = api.update_status(tweet)
 
-            # if "bonus" in items.lower():
-            #     media = api.update_with_media("2.jpg",tweet)
-            #     continue
-            if "win" in items.lower():
-                media = api.update_status(tweet)
-                continue
-            if "slots" in items.lower():
-                media = api.update_status(tweet)
-                continue
-            if "sports" or "Sports" in items.lower():
-                media = api.update_status(tweet)
-                continue
-            if "bonuses" or "reload" or "bonus" in items.lower():
-                media_1 = api.media_upload("vid.gif")
-                media = api.update_status(tweet)
-                continue
-            if "#casino" or "#casinos" in items.lower():
-                media = api.update_status(tweet)
-                continue
-            media = api.update_status(tweet)
-print(tweet)
-# media = api.update_with_media("win (1).jpg",tweet)
-#api.update_status(tweet)
+            except:
+                pass
