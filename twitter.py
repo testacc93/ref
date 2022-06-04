@@ -1,4 +1,5 @@
 # import twitter
+print("inside 1")
 consumer_key = '7x1acaIGA45sRffagIPgNplQc'
 consumer_sec = 'MNIFleE7GzOGSe9V7Qmj9kP3bM40eVxjA0owEIiNnoCNr0RHz4'
 access_token='1383777392221573130-PE6Qnn8pwekel6djp8zQ7Ik1YrfI5i'
@@ -7,6 +8,7 @@ access_sec = 'GiWFdmkPvaig4zWxobG3JjLqlkOtQJ059WriM4JUJezGf'
 #
 # print(twitter.api.Api.GetFollowers())
 import tweepy
+print("inside 2")
 from time import sleep
 auth = tweepy.OAuthHandler(consumer_key, consumer_sec)
 auth.set_access_token(access_token, access_sec)
@@ -37,6 +39,7 @@ data = ['get your first $15 bonus at ',
         ]
 hash_tags = '#cryptocurrency #crypto #casino #bitcoin #blackjack #btc #gambling #betting #cryptocurrencies #invest #cryptonews #bitcoincash #litecoin #eth'
 link = ' https://stake.com/?c=b980983c1a   '
+print("inside 3")
 import datetime
 api = tweepy.API(auth)
 for j in range(0, 10000):
